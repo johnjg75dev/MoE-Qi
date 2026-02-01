@@ -1,0 +1,15 @@
+{
+  "name": "moeqi-wasm",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "moeqi_wasm_bg.wasm",
+    "moeqi_wasm.js",
+    "moeqi_wasm.d.ts"
+  ],
+  "main": "moeqi_wasm.js",
+  "types": "moeqi_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

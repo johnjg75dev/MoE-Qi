@@ -1,0 +1,6 @@
+# Keep build outputs out of version control
+target/
+**/target/
+pkg/
+**/pkg/
+.idea/
