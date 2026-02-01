@@ -1,0 +1,54 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare release artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+
+          if [ -d dist ]; then
+            tar -czf release/dist.tar.gz dist
+          fi
+
+          if [ -d moeqi-wasm/pkg ]; then
+            tar -czf release/moeqi-wasm-pkg.tar.gz -C moeqi-wasm pkg
+          fi
+
+          if [ -d moeqi-core ]; then
+            tar -czf release/moeqi-core.tar.gz moeqi-core
+          fi
+
+          if [ -d moeqi-ffi ]; then
+            tar -czf release/moeqi-ffi.tar.gz moeqi-ffi
+          fi
+
+          if [ -d moeqi ]; then
+            tar -czf release/moeqi.tar.gz moeqi
+          fi
+
+          ls -la release
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+          generate_release_notes: true
+          fail_on_unmatched_files: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
