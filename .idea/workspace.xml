@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/ol/moeqi-core/Cargo.toml">
+      <package file="$PROJECT_DIR$/ol/moeqi-core">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+    <cargoProject FILE="$PROJECT_DIR$/ol/moeqi-ffi/Cargo.toml">
+      <package file="$PROJECT_DIR$/ol/moeqi-ffi">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+    <cargoProject FILE="$PROJECT_DIR$/ol/moeqi-wasm/Cargo.toml">
+      <package file="$PROJECT_DIR$/ol/moeqi-wasm">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+    <cargoProject FILE="$PROJECT_DIR$/moeqi/Cargo.toml">
+      <package file="$PROJECT_DIR$/moeqi">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1cef5a3-c7f9-4987-999b-13f771ad1cb3" name="Changes" comment="Initial release (alpha)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="39" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "johnjg75dev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/johnjg75dev/MoE-Qi",
+    "accountId": "6e9fad0e-2449-4b55-9fa7-834ac330f926"
+  }
+}]]></component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="PtyRHfG9" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="395DB8XJwCYvcVUVK0GcjKs4KzQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/John/Desktop/AI Gens/MoE-EncDec-gpt/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.disableDetachedFileInspectionC:/Users/John/Desktop/AI Gens/MoE-EncDec-gpt/lib/ol/moeqi-core/codec/varint.rs": "true",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\John\Desktop\AI Gens\MoE-EncDec-gpt\lib" />
+      <recent name="C:\Users\John\Desktop\AI Gens\MoE-EncDec-gpt\lib\ol\moeqi-core\src" />
+    </key>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1cef5a3-c7f9-4987-999b-13f771ad1cb3" name="Changes" comment="" />
+      <created>1769976907224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769976907224</updated>
+      <workItem from="1769976910029" duration="4601000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial release (alpha)">
+      <option name="closed" value="true" />
+      <created>1769980687897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769980687897</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial release (alpha)">
+      <option name="closed" value="true" />
+      <created>1769980756849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769980756849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial release (alpha)">
+      <option name="closed" value="true" />
+      <created>1769980902418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769980902420</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial release (alpha)">
+      <option name="closed" value="true" />
+      <created>1769980967450</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769980967450</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial release (alpha)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial release (alpha)" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
