@@ -1,3 +1,5 @@
+#![doc = include_str!("../README.md")]
+
 use moeqi_core::types::{CodecConfig, Image, PixelFormat};
 use moeqi_core::{format, Result};
 
@@ -65,6 +67,7 @@ pub extern "C" fn moeqi_encode(
         Err(_) => MoeqiBuf { ptr: core::ptr::null_mut(), len: 0, cap: 0 },
     }
 }
+
 
 #[cfg(feature = "wasm")]
 mod wasm_api {

@@ -1,5 +1,7 @@
+#![doc = include_str!("../README.md")]
+
+use moeqi_core::types::{CodecConfig, Image, PixelFormat};
 use wasm_bindgen::prelude::*;
-use moeqi_core::types::{Image, PixelFormat, CodecConfig};
 
 #[wasm_bindgen]
 pub struct Decoded {

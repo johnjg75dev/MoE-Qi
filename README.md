@@ -1,38 +1,41 @@
-# MoE-EncDec-gpt / lib
+# MoE-Qi
 
 Rust libraries and bindings for the `moeqi` codec/core implementation, plus helper build scripts for native and WASM outputs.
 
 ## Structure
 
-- `ol/moeqi-core/` — core Rust library (`moeqi-core`)
-- `ol/moeqi-ffi/` — FFI crate that builds a DLL (`moeqi-ffi`)
-- `ol/moeqi-wasm/` — WASM bindings (`moeqi-wasm`)
-- `ol/dist/` — build artifacts copied by the scripts (gitignored)
-- `ol/compile-dll.bat` — Windows build script for the DLL
-- `ol/compile-wasm.bat` — WASM build script (uses `wasm-pack`)
-- `moeqi/` — workspace manifest + sample crate
+- `moeqi-core/` — core Rust library (`moeqi-core`)
+- `moeqi/` — convenience wrapper crate (`moeqi`)
+- `moeqi-ffi/` — FFI crate that builds a DLL (`moeqi-ffi`)
+- `moeqi-wasm/` — WASM bindings (`moeqi-wasm`)
+- `dist/` — build artifacts copied by the scripts (gitignored)
+- `common.bat` — all-in-one script for build/test/doc/dll/wasm outputs
 
 ## Prerequisites
 
 - Rust toolchain (stable)
 - `wasm-pack` (only for the WASM build)
 
-## Build
+## Documentation
 
-From `C:\Users\John\Desktop\AI Gens\MoE-EncDec-gpt\lib\ol`:
+```powershell
+cargo doc --workspace --no-deps
+```
+
+## Build
 
 ```powershell
 # Core library
-cargo build --release --manifest-path moeqi-core\Cargo.toml
+cargo build -p moeqi-core --release
 
 # FFI DLL
-.\compile-dll.bat
+.\common.bat dll
 
 # WASM package
-.\compile-wasm.bat
+.\common.bat wasm
 ```
 
-Artifacts are copied into `ol/dist/`.
+Artifacts are copied into `dist/`.
 
 ## Notes
 
