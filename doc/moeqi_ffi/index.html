@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="`moeqi-ffi`">
+    <title>moeqi_ffi - Rust</title>
+    <script>if (window.location.protocol !== "file:") document.head.insertAdjacentHTML("beforeend", "SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f => `<link rel="preload" as="font" type="font/woff2"href="../static.files/${f}">`).join(""))</script>
+    <link rel="stylesheet" href="../static.files/normalize-9960930a.css">
+    <link rel="stylesheet" href="../static.files/rustdoc-ca0dd0c4.css">
+    <meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/"
+          data-current-crate="moeqi_ffi" data-themes="" data-resource-suffix=""
+          data-rustdoc-version="1.92.0 (ded5c06cf 2025-12-08)" data-channel="1.92.0" data-search-js="search-d69d8955.js"
+          data-stringdex-js="stringdex-c3e638e9.js" data-settings-js="settings-c38705f0.js">
+    <script src="../static.files/storage-e2aeef58.js"></script>
+    <script defer src="../crates.js"></script>
+    <script defer src="../static.files/main-ce535bd0.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../static.files/noscript-263c88ec.css">
+    </noscript>
+    <link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-eab170b8.png">
+    <link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg">
+</head>
+<body class="rustdoc mod crate">
+<!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<rustdoc-topbar><h2><a href="#">Crate moeqi_ffi</a></h2></rustdoc-topbar>
+<nav class="sidebar">
+    <div class="sidebar-crate">
+        <h2><a href="../moeqi_ffi/index.html">moeqi_
+            <wbr>
+            ffi</a><span class="version">0.1.0</span></h2>
+    </div>
+    <div class="sidebar-elems">
+        <ul class="block">
+            <li><a id="all-types" href="all.html">All Items</a></li>
+        </ul>
+        <section id="rustdoc-toc"><h3><a href="#">Sections</a></h3>
+            <ul class="block top-toc">
+                <li><a href="#moeqi-ffi" title="`moeqi-ffi`"><code>moeqi-ffi</code></a>
+                    <ul>
+                        <li><a href="#build-docs" title="Build docs">Build docs</a></li>
+                        <li><a href="#safety" title="Safety">Safety</a></li>
+                        <li><a href="#example-rust-compile-only" title="Example (Rust, compile-only)">Example (Rust,
+                            compile-only)</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <h3><a href="#structs">Crate Items</a></h3>
+            <ul class="block">
+                <li><a href="#structs" title="Structs">Structs</a></li>
+                <li><a href="#functions" title="Functions">Functions</a></li>
+            </ul>
+        </section>
+        <div id="rustdoc-modnav"></div>
+    </div>
+</nav>
+<div class="sidebar-resizer" title="Drag to resize sidebar"></div>
+<main>
+    <div class="width-limiter">
+        <section id="main-content" class="content">
+            <div class="main-heading">
+                <h1>Crate <span>moeqi_<wbr>ffi</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">
+                    Copy item path
+                </button>
+                </h1>
+                <rustdoc-toolbar></rustdoc-toolbar>
+                <span class="sub-heading"><a class="src" href="../src/moeqi_ffi/lib.rs.html#1-93">Source</a> </span>
+            </div>
+            <details class="toggle top-doc" open>
+                <summary class="hideme"><span>Expand description</span></summary>
+                <div class="docblock"><h2 id="moeqi-ffi"><a class="doc-anchor"
+                                                            href="#moeqi-ffi">§</a><code>moeqi-ffi</code></h2>
+                    <p>C ABI wrapper around <code>moeqi-core</code>, intended for building a DLL (or using the optional
+                        <code>wasm</code> feature).</p>
+                    <h3 id="build-docs"><a class="doc-anchor" href="#build-docs">§</a>Build docs</h3>
+                    <p>From the repository root:</p>
+                    <div class="example-wrap">
+                        <pre class="language-powershell"><code>cargo doc --workspace --no-deps</code></pre>
+                    </div>
+                    <h3 id="safety"><a class="doc-anchor" href="#safety">§</a>Safety</h3>
+                    <p>The exported C functions work with raw pointers and lengths. Treat all inputs as <em>unsafe</em>:
+                    </p>
+                    <ul>
+                        <li>Pointers must be non-null and valid for reads/writes as documented by the function
+                            signature.
+                        </li>
+                        <li>Lengths must match the actual allocation sizes.</li>
+                        <li><code>moeqi_free_buf</code> must only be called on buffers returned by this library.</li>
+                    </ul>
+                    <h3 id="example-rust-compile-only"><a class="doc-anchor" href="#example-rust-compile-only">§</a>Example
+                        (Rust, compile-only)</h3>
+                    <div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>moeqi_ffi::{moeqi_encode, moeqi_free_buf};
+
+<span class="kw">let </span>pixels = <span class="macro">vec!</span>[<span class="number">0u8</span>; <span
+                                class="number">4</span>]; <span class="comment">// 2x2 Gray8
+</span><span class="kw">let </span>out = <span class="kw">unsafe </span>{
+    moeqi_encode(
+        pixels.as_ptr(),
+        pixels.len(),
+        <span class="number">2</span>,
+        <span class="number">2</span>,
+        <span class="number">1</span>, <span class="comment">// Gray8
+        </span>core::ptr::null(),
+        <span class="number">0</span>,
+    )
+};
+
+<span class="kw">unsafe </span>{ moeqi_free_buf(out) };</code></pre>
+                    </div>
+                </div>
+            </details>
+            <h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2>
+            <dl class="item-table">
+                <dt><a class="struct" href="struct.MoeqiBuf.html" title="struct moeqi_ffi::MoeqiBuf">Moeqi
+                    <wbr>
+                    Buf</a></dt>
+            </dl>
+            <h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2>
+            <dl class="item-table">
+                <dt><a class="fn" href="fn.moeqi_encode.html" title="fn moeqi_ffi::moeqi_encode">moeqi_
+                    <wbr>
+                    encode</a></dt>
+                <dd>Encode raw pixels (Gray8/RGB8/RGBA8) into MOEQI1 container bytes.
+                    cfg_json: UTF-8 JSON of CodecConfig, or null for default.
+                </dd>
+                <dt><a class="fn" href="fn.moeqi_free_buf.html" title="fn moeqi_ffi::moeqi_free_buf">moeqi_
+                    <wbr>
+                    free_
+                    <wbr>
+                    buf</a></dt>
+            </dl>
+        </section>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn": ["bpp", "is_color", "mse", "psnr"]};

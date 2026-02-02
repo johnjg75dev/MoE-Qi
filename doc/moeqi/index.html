@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="`moeqi`">
+    <title>moeqi - Rust</title>
+    <script>if (window.location.protocol !== "file:") document.head.insertAdjacentHTML("beforeend", "SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f => `<link rel="preload" as="font" type="font/woff2"href="../static.files/${f}">`).join(""))</script>
+    <link rel="stylesheet" href="../static.files/normalize-9960930a.css">
+    <link rel="stylesheet" href="../static.files/rustdoc-ca0dd0c4.css">
+    <meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="moeqi"
+          data-themes="" data-resource-suffix="" data-rustdoc-version="1.92.0 (ded5c06cf 2025-12-08)"
+          data-channel="1.92.0" data-search-js="search-d69d8955.js" data-stringdex-js="stringdex-c3e638e9.js"
+          data-settings-js="settings-c38705f0.js">
+    <script src="../static.files/storage-e2aeef58.js"></script>
+    <script defer src="../crates.js"></script>
+    <script defer src="../static.files/main-ce535bd0.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="../static.files/noscript-263c88ec.css">
+    </noscript>
+    <link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-eab170b8.png">
+    <link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg">
+</head>
+<body class="rustdoc mod crate"><!--[if lte IE 11]>
+<div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<rustdoc-topbar><h2><a href="#">Crate moeqi</a></h2></rustdoc-topbar>
+<nav class="sidebar">
+    <div class="sidebar-crate"><h2><a href="../moeqi/index.html">moeqi</a><span class="version">0.1.0</span></h2></div>
+    <div class="sidebar-elems">
+        <ul class="block">
+            <li><a id="all-types" href="all.html">All Items</a></li>
+        </ul>
+        <section id="rustdoc-toc"><h3><a href="#">Sections</a></h3>
+            <ul class="block top-toc">
+                <li><a href="#moeqi" title="`moeqi`"><code>moeqi</code></a>
+                    <ul>
+                        <li><a href="#build-docs" title="Build docs">Build docs</a></li>
+                        <li><a href="#quick-start" title="Quick start">Quick start</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <h3><a href="#structs">Crate Items</a></h3>
+            <ul class="block">
+                <li><a href="#structs" title="Structs">Structs</a></li>
+                <li><a href="#enums" title="Enums">Enums</a></li>
+                <li><a href="#functions" title="Functions">Functions</a></li>
+                <li><a href="#types" title="Type Aliases">Type Aliases</a></li>
+            </ul>
+        </section>
+        <div id="rustdoc-modnav"></div>
+    </div>
+</nav>
+<div class="sidebar-resizer" title="Drag to resize sidebar"></div>
+<main>
+    <div class="width-limiter">
+        <section id="main-content" class="content">
+            <div class="main-heading">
+                <h1>Crate <span>moeqi</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item
+                    path
+                </button>
+                </h1>
+                <rustdoc-toolbar></rustdoc-toolbar>
+                <span class="sub-heading"><a class="src" href="../src/moeqi/lib.rs.html#1-13">Source</a> </span></div>
+            <details class="toggle top-doc" open>
+                <summary class="hideme"><span>Expand description</span></summary>
+                <div class="docblock"><h2 id="moeqi"><a class="doc-anchor" href="#moeqi">§</a><code>moeqi</code></h2>
+                    <p>Convenience wrapper crate for the MoE-Qi codec implementation.</p>
+                    <p>Most of the implementation lives in <code>moeqi-core</code>. This crate provides a small, stable
+                        surface:</p>
+                    <ul>
+                        <li><code>moeqi::encode</code> / <code>moeqi::decode</code> for the binary container format
+                            (<code>MOEQI1</code>)
+                        </li>
+                        <li><code>moeqi::Image</code>, <code>moeqi::PixelFormat</code>, <code>moeqi::CodecConfig</code>
+                            re-exports
+                        </li>
+                    </ul>
+                    <h3 id="build-docs"><a class="doc-anchor" href="#build-docs">§</a>Build docs</h3>
+                    <p>From the repository root:</p>
+                    <div class="example-wrap">
+                        <pre class="language-powershell"><code>cargo doc --workspace --no-deps</code></pre>
+                    </div>
+                    <h3 id="quick-start"><a class="doc-anchor" href="#quick-start">§</a>Quick start</h3>
+                    <div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>moeqi::{CodecConfig, Image, PixelFormat};
+
+<span class="kw">let </span>img = Image {
+    width: <span class="number">2</span>,
+    height: <span class="number">2</span>,
+    format: PixelFormat::Gray8,
+    data: <span class="macro">vec!</span>[<span class="number">0</span>, <span class="number">10</span>, <span
+                                class="number">20</span>, <span class="number">30</span>],
+};
+
+<span class="kw">let </span>bytes = moeqi::encode(<span class="kw-2">&amp;</span>img, CodecConfig::default())<span
+                                class="question-mark">?</span>;
+<span class="kw">let </span>(roundtrip, _cfg) = moeqi::decode(<span class="kw-2">&amp;</span>bytes)<span
+                                class="question-mark">?</span>;
+<span class="macro">assert_eq!</span>(roundtrip.data, img.data);</code></pre>
+                    </div>
+                </div>
+            </details>
+            <h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2>
+            <dl class="item-table">
+                <dt><a class="struct" href="struct.CodecConfig.html" title="struct moeqi::CodecConfig">Codec
+                    <wbr>
+                    Config</a></dt>
+                <dt><a class="struct" href="struct.Image.html" title="struct moeqi::Image">Image</a></dt>
+            </dl>
+            <h2 id="enums" class="section-header">Enums<a href="#enums" class="anchor">§</a></h2>
+            <dl class="item-table">
+                <dt><a class="enum" href="enum.CodecKind.html" title="enum moeqi::CodecKind">Codec
+                    <wbr>
+                    Kind</a></dt>
+                <dt><a class="enum" href="enum.ColorTransform.html" title="enum moeqi::ColorTransform">Color
+                    <wbr>
+                    Transform</a></dt>
+                <dt><a class="enum" href="enum.MoeqiError.html" title="enum moeqi::MoeqiError">Moeqi
+                    <wbr>
+                    Error</a></dt>
+                <dt><a class="enum" href="enum.PixelFormat.html" title="enum moeqi::PixelFormat">Pixel
+                    <wbr>
+                    Format</a></dt>
+            </dl>
+            <h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2>
+            <dl class="item-table">
+                <dt><a class="fn" href="fn.decode.html" title="fn moeqi::decode">decode</a></dt>
+                <dd>Decode an <code>MOEQI1</code> binary container into an <a href="struct.Image.html"
+                                                                              title="struct moeqi::Image"><code>Image</code></a>
+                    and the parsed <a href="struct.CodecConfig.html"
+                                      title="struct moeqi::CodecConfig"><code>CodecConfig</code></a>.
+                </dd>
+                <dt><a class="fn" href="fn.encode.html" title="fn moeqi::encode">encode</a></dt>
+                <dd>Encode an <a href="struct.Image.html" title="struct moeqi::Image"><code>Image</code></a> into the
+                    <code>MOEQI1</code> binary container format.
+                </dd>
+            </dl>
+            <h2 id="types" class="section-header">Type Aliases<a href="#types" class="anchor">§</a></h2>
+            <dl class="item-table">
+                <dt><a class="type" href="type.Result.html" title="type moeqi::Result">Result</a></dt>
+            </dl>
+        </section>
+    </div>
+</main>
+</body>
+</html>

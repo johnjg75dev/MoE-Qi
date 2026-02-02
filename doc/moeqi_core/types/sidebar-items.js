@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum": ["CodecKind", "ColorTransform", "PixelFormat"], "struct": ["CodecConfig", "Image"]};

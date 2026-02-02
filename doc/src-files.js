@@ -1,0 +1,2 @@
+createSrcSidebar('[["moeqi",["",[],["lib.rs"]]],["moeqi_core",["",[["codec",[],["mod.rs","quant.rs","varint.rs"]],["format",[],["binary.rs","json.rs","mod.rs"]],["train",[],["eval.rs","fit.rs","mod.rs"]]],["error.rs","lib.rs","types.rs"]]],["moeqi_ffi",["",[],["lib.rs"]]],["moeqi_wasm",["",[],["lib.rs"]]]]');
+//{"start":19,"fragment_lengths":[28,192,33,34]}

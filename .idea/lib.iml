@@ -10,6 +10,8 @@
       <excludeFolder url="file://$MODULE_DIR$/moeqi-ffi/target" />
       <excludeFolder url="file://$MODULE_DIR$/moeqi-wasm/target" />
       <excludeFolder url="file://$MODULE_DIR$/moeqi/target" />
+      <excludeFolder url="file://$MODULE_DIR$/moeqi-wasm/pkg" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
